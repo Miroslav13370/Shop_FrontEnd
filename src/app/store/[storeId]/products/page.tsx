@@ -1,0 +1,18 @@
+import type { Metadata } from 'next';
+
+import { NO_INDEX_PAGE } from '@/src/constants/seo.constants';
+
+import Products from './Products';
+
+export const metadata: Metadata = {
+  title: 'Товары',
+  ...NO_INDEX_PAGE,
+};
+
+export default function ProductsPage() {
+  return (
+    <div>
+      <Products />
+    </div>
+  );
+}

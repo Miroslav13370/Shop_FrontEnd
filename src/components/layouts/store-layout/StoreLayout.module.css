@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+.wrapper {
+  @apply flex flex-col w-full;
+}
+
+.header {
+  @apply fixed h-16 border-b w-full z-49;
+}
+
+.sidebar {
+  @apply hidden lg:flex fixed w-60 h-full bg-gray-50 border-r z-50;
+}
+
+.wrapper main {
+  @apply pt-16 lg:pt-[60px] lg:pl-60;
+}
