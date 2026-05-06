@@ -1,5 +1,5 @@
 'use client';
-import { Heart, LogOut, Menu, ShoppingBag, ShoppingCart, Store } from 'lucide-react';
+import { BadgePlus, Heart, LogOut, Menu, ShoppingBag, ShoppingCart, Store } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -32,7 +32,7 @@ const MobileSidebarExplorer = () => {
       <SheetContent
         side="left"
         style={{
-          width: '230px',
+          width: '250px',
         }}
       >
         <SheetHeader hidden>
@@ -77,11 +77,13 @@ const MobileSidebarExplorer = () => {
                   <ShoppingBag /> Мой магазин
                 </Link>
               ) : (
-                <div
-                  className="text-xl font-medium flex items-center gap-2 text-black/70  "
-                  onClick={() => setIsOpen(false)}
-                >
-                  <CreateStoreModal>Создать магазин</CreateStoreModal>
+                <div onClick={() => setIsOpen(false)}>
+                  <CreateStoreModal>
+                    <button className="text-xl font-medium flex items-center gap-2 text-black/70  mb-[-4px]">
+                      <BadgePlus />
+                      Создать магазин
+                    </button>
+                  </CreateStoreModal>
                 </div>
               )}
               <div className="flex mx-auto mb-[-10px]" onClick={() => setIsOpen(false)}>
