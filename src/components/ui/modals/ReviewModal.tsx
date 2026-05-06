@@ -42,7 +42,7 @@ export const ReviewModal = ({ children, storeId }: Props) => {
     <div>
       <Dialog open={open} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>{children}</DialogTrigger>
-        <DialogContent className="min-w-120">
+        <DialogContent className="sm:min-w-120">
           <form onSubmit={handleSubmit(onSubmit)}>
             <DialogHeader className="mb-2">
               <DialogTitle>Создание отзыва</DialogTitle>
