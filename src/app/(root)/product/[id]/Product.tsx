@@ -20,7 +20,7 @@ const Product: FC<IProps> = ({ similarProducts, id }) => {
   const { data: product } = useGetProductByIdQuery(id ? id : '');
 
   return (
-    <div className="p-8 px-25">
+    <div className="p-8 md:px-25 ">
       <div className="grid gap-10 mb-8 lg:grid-cols-2 lg:gap-20 ">
         <ProductGallery product={product} />
         <ProductInfo product={product} />

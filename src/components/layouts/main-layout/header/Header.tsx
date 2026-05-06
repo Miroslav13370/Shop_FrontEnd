@@ -1,3 +1,4 @@
+import MobileSidebarExplorer from '../../store-layout/sidebar/MobileSidebarExplorer';
 import Logo from '../logo/Logo';
 import HeaderMenu from './header-menu/HeaderMenu';
 import SearchInput from './search-input/SearchInput';
@@ -5,9 +6,17 @@ import SearchInput from './search-input/SearchInput';
 const Header = () => {
   return (
     <div className="flex items-center justify-between border-b px-4 py-3">
-      <Logo />
+      <div className="md:hidden">
+        <MobileSidebarExplorer />
+      </div>
+      <div className="hidden lg:block">
+        <Logo />
+      </div>
+
       <SearchInput />
-      <HeaderMenu />
+      <div className="hidden md:flex">
+        <HeaderMenu />
+      </div>
     </div>
   );
 };

@@ -14,12 +14,19 @@ const SearchInput = () => {
   const router = useRouter();
 
   return (
-    <div className="flex w-120 ">
+    <div className="flex w-full md:w-120  ml-4">
       <Input
         placeholder="Поиск товаров"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="rounded-sm rounded-tr-none rounded-br-none w-full"
+        type="search"
+        enterKeyHint="search"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            router.push(PUBLIC_URL.explorer(`?searchTerm=${searchTerm}`));
+          }
+        }}
       />
       <Button
         variant="primary"

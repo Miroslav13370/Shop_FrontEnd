@@ -8,11 +8,11 @@ export const Catalog = ({ title, description, linkTitle, link, products, isScrol
     <div>
       <div className="flex items-center justify-between">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold mb-2">{title}</h1>
+          <h1 className="text-xl md:text-2xl font-bold mb-2">{title}</h1>
           {description && <p className="text-sm text-black/60">{description}</p>}
         </div>
         {link && linkTitle && (
-          <Link href={link} className="text-blue-500 text-sm">
+          <Link href={link} className="text-blue-500 text-sm ml-3">
             {linkTitle}
           </Link>
         )}

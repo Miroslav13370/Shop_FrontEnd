@@ -46,7 +46,7 @@ const HeaderMenu = () => {
               alt={user.name}
               width={35}
               height={35}
-              className="rounded-full"
+              className="rounded-full min-w-8"
             />
           </Link>
         </>

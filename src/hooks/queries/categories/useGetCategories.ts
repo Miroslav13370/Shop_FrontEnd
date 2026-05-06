@@ -8,6 +8,8 @@ const useGetCategories = () => {
     params.storeId,
   );
 
+  console.log(categoryListData);
+
   return { categoryListData, isLoadingCategory };
 };
 

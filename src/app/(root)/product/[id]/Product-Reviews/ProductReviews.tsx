@@ -37,7 +37,7 @@ export const ProductReviews = ({ product }: Props) => {
           product?.reviews?.map((review) => (
             <div
               key={review.id}
-              className="p-2 border min-w-80 rounded-md shadow-md flex flex-col gap-2 pl-3"
+              className="p-2 border min-w-70 rounded-md shadow-md flex flex-col gap-2 pl-3"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 mt-2">

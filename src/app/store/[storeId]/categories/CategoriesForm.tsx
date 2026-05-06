@@ -8,6 +8,7 @@ import { Input } from '@/src/components/ui/input';
 import { ConfirmModals } from '@/src/components/ui/modals/ConfirmModals';
 import { Textarea } from '@/src/components/ui/textarea';
 import useCreateCategory from '@/src/hooks/queries/categories/useCreateCategory';
+import useDeleteCategory from '@/src/hooks/queries/categories/useDeleteCategory';
 import useUpdateCategory from '@/src/hooks/queries/categories/useUpdateCategory';
 import useDeleteColor from '@/src/hooks/queries/colors/useDeleteColor';
 import { ICategoryInput } from '@/src/types/category.interface';
@@ -29,7 +30,7 @@ export const CategoryForm = ({ category }: Props) => {
 
   const { createCategory } = useCreateCategory();
 
-  const { deleteColor, isLoadingDeleteColor } = useDeleteColor();
+  const { deleteCategory, isLoadingDeleteCategory } = useDeleteCategory();
 
   const { register, handleSubmit } = useForm<ICategoryInput>({
     mode: 'onChange',
@@ -49,8 +50,8 @@ export const CategoryForm = ({ category }: Props) => {
       <div className="flex justify-between items-center mb-4">
         <Heading title={title} description={description} />
         <div className={`${category ? '' : 'hidden'}`}>
-          <ConfirmModals handlerFunc={deleteColor}>
-            <Button className="bg-blue-500 w-12 h-11" disabled={isLoadingDeleteColor}>
+          <ConfirmModals handlerFunc={deleteCategory}>
+            <Button className="bg-blue-500 w-12 h-11" disabled={isLoadingDeleteCategory}>
               <Trash2Icon />
             </Button>
           </ConfirmModals>

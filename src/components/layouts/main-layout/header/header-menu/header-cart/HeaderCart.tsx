@@ -38,14 +38,16 @@ const HeaderCart = () => {
   return (
     <Sheet open={open} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost">Корзина</Button>
+        <Button variant="ghost" className="text-xl md:text-sm">
+          Корзина
+        </Button>
       </SheetTrigger>
       <SheetContent className="p-4">
         <SheetTitle>
           <Heading title="Корзина товаров" />
         </SheetTitle>
         <SheetDescription hidden></SheetDescription>
-        <div className="flex flex-col gap-3 overflow-auto">
+        <div className="flex flex-col overflow-auto gap-6">
           {items.length ? (
             items.map((item) => (
               <CartItem item={item} key={item.id} onCloseFunc={() => setIsOpen(false)} />

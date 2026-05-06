@@ -14,29 +14,29 @@ export const ProductGallery = ({ product }: Props) => {
 
   return (
     <div className="flex flex-col gap-5 ">
-      <div className="bg-gray-200 p-5 rounded-md flex h-140 ">
+      <div className="bg-gray-200 p-5 rounded-md flex md:h-140  ">
         <Image
           src={returnImagesUrl(product.images[imageIndex])}
           alt={product.title}
           width={1000}
           height={1000}
-          className="object-cover rounded-md "
+          className="object-cover rounded-md"
         />
       </div>
-      <div className="flex gap-5">
+      <div className="flex gap-5 flex-wrap">
         {product.images.map((url, index) => (
           <button
             key={url}
             onClick={() => setImageIndex(index)}
             className={`${index === imageIndex ? 'border-black border' : ''} rounded-xl overflow-hidden`}
           >
-            <div className="bg-gray-200 p-2 rounded-md w-30 h-30 ">
+            <div className="bg-gray-200 p-2 rounded-md md:w-30 md:h-30 w-19 h-19">
               <Image
                 src={returnImagesUrl(url)}
                 alt={product.title}
                 width={1000}
                 height={1000}
-                className="object-cover rounded-md w-26 h-26"
+                className="object-cover rounded-md md:w-26 md:h-26 w-15 h-15"
               />
             </div>
           </button>

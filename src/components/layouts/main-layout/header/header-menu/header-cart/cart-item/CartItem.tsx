@@ -14,7 +14,7 @@ type Props = {
 };
 export const CartItem = ({ item, onCloseFunc }: Props) => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 flex-col xs:flex-row ">
       <Link href={PUBLIC_URL.product(item.product.id)} onClick={() => onCloseFunc()}>
         <div className="bg-gray-200 p-2 rounded-md w-30 h-30">
           <Image

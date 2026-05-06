@@ -16,6 +16,7 @@ const Categories = () => {
   const params = useParams<{ storeId: string }>();
 
   const { categoryListData, isLoadingCategory } = useGetCategories();
+  console.log(categoryListData);
   return (
     <div className="p-5">
       {categoryListData && !isLoadingCategory ? (
