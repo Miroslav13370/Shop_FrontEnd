@@ -77,14 +77,12 @@ const MobileSidebarExplorer = () => {
                   <ShoppingBag /> Мой магазин
                 </Link>
               ) : (
-                <div onClick={() => setIsOpen(false)}>
-                  <CreateStoreModal>
-                    <button className="text-xl font-medium flex items-center gap-2 text-black/70  mb-[-4px]">
-                      <BadgePlus />
-                      Создать магазин
-                    </button>
-                  </CreateStoreModal>
-                </div>
+                <CreateStoreModal>
+                  <button className="text-xl font-medium flex items-center gap-2 text-black/70  mb-[-4px]">
+                    <BadgePlus />
+                    Создать магазин
+                  </button>
+                </CreateStoreModal>
               )}
               <div className="flex mx-auto mb-[-10px]" onClick={() => setIsOpen(false)}>
                 <Link href={DASHBOARD_URL.home()}>
