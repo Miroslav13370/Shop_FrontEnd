@@ -6,7 +6,7 @@ import SearchInput from './search-input/SearchInput';
 const Header = () => {
   return (
     <div className="flex items-center justify-between border-b px-4 py-3">
-      <div className="md:hidden">
+      <div className="md:hidden mt-0">
         <MobileSidebarExplorer />
       </div>
       <div className="hidden lg:block">

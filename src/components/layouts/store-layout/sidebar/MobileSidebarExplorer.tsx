@@ -27,7 +27,7 @@ const MobileSidebarExplorer = () => {
   return (
     <Sheet open={open} onOpenChange={setIsOpen}>
       <SheetTrigger>
-        <Menu />
+        <Menu className="mt-1" />
       </SheetTrigger>
       <SheetContent
         side="left"
